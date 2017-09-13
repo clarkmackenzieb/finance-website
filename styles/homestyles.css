@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flexy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/yiannis-papanastasopoulos-359327.jpg");
+    background-size: 103%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.green {
+    color: #FCEC52;
+}
+
+
+.headtext {
+    font-family: lora;
+    color: #FDFFFC;
+    font-weight: bold;
+    padding: 1% 1%;
+}
+
+.bigtext {
+    font-size: 90px;
+    margin-bottom: 1%;
+    width: 30%;
+    height: 20%;
+}
+
+.wrappy {
+    width: 25%;
+    font-weight: normal;
+    margin-left: 2%;
+}
+
+.linky {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.linky:hover {
+    text-decoration: none;
+    color: #06D6A0;
+}
+
+.bottom {
+    display: flex;
+    margin-top: 33%;
+
+}

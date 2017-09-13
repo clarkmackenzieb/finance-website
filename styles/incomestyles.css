@@ -1,0 +1,25 @@
+.stupidname{
+    background-image: url("../img/marc-olivier-jodoin-247246.jpg");
+    background-color: #034078;
+    height: 30vh;
+    width: 100vw;
+    color: #034078;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+}
+
+.blackback{
+    background-color: #342E37;
+    width: 100vw;
+    height: 70vh;
+    color: black;
+}
+
+#thecontainer {
+    display: block;
+    width: 500px;
+    height: 500px;
+
+}
