@@ -1,15 +1,26 @@
 <div>
 <div class="stupidname"> 
-        <div class="icon border border-white rounded-circle"></div>
+       
 </div>
-<div class="blackback" ng-controller="budgetCtrl">
+<div class="blackback">
+       
     
-    <div>we neeeeeed input boxes and styling lol, maybe empty graphs that fill w information? </div>
+    <input type="text" placeholder="Income" ng-model="mainincome">
+    <button ng-click="addthestuff()">Clicky</button>
+    <input type="text" placeholder="Rent" ng-model="mainrent">
+    <input type="text" placeholder="Food" ng-model="mainfood">
 
+    <ul>
+        <li>Tax bracket BS</li>
+        <li>cost of living BS!</li>
+        <li>this is NOT the budget page-- taxes info</li>
+    </ul>
+{{thingy}}
     <div class="container">
         <canvas id="myChart" width="1500" height="800"></canvas>
         </div>
-
+ 
+        
 </div>
 
 
