@@ -1,4 +1,4 @@
-angular.module("budgetApp", ['ui.router'])
+angular.module("budgetApp", ['ui.router', 'firebase'])
 .config(function($stateProvider, $urlRouterProvider){
 
     
