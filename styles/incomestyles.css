@@ -13,7 +13,7 @@
 .blackback{
     background-color: #342E37;
     width: 100vw;
-    height: 70vh;
+    height: 100vh;;
     color: black;
 }
 
@@ -22,4 +22,8 @@
     width: 500px;
     height: 500px;
 
+}
+
+p {
+    color: white;
 }

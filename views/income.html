@@ -5,17 +5,22 @@
 <div class="blackback">
        
     
-    <input type="text" placeholder="Income" ng-model="mainincome">
-    <button ng-click="addthestuff()">Clicky</button>
-    <input type="text" placeholder="Rent" ng-model="mainrent">
-    <input type="text" placeholder="Food" ng-model="mainfood">
+    <input type="text" placeholder="Income" ng-model="payRate">
+    <input type="text" placeholder="State Abbreviation" ng-model="state">
+    <input type="text" placeholder="Filing Status" ng-model="filingStatus">
+    <button ng-click="bigfunction()">Submit Information</button>
+    <p>Income:<br> Raw Data (eg $50,000 = 50000)</p>
+    <p>State Abbreviation:<br> Tennessee: TN, California: CA, etc.</p>
+    <p>Filing Status:<br> 1 - Single;<br> 2 - Married, Filing Jointly;<br> 3 - Married, Filing Seperately;<br> 4 - Head of Household</p>
+    <!-- 
+        
+        (either "single", "married", "married_separately", or "head_of_household")
+        
+        <button ng-click="addthestuff()">Clicky</button> -->
 
-    <ul>
-        <li>Tax bracket BS</li>
-        <li>cost of living BS!</li>
-        <li>this is NOT the budget page-- taxes info</li>
-    </ul>
-{{thingy}}
+
+
+
     <div class="container">
         <canvas id="myChart" width="1500" height="800"></canvas>
         </div>
