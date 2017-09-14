@@ -1,29 +1,35 @@
-<div>
+<div class="backgroundclr">
 <div class="stupidname"> 
-       
+       <a ui-sref="home" class="link"></a>
 </div>
+<div class="stacking">
 <div class="blackback">
        
-    
-    <input type="text" placeholder="Income" ng-model="payRate">
-    <input type="text" placeholder="State Abbreviation" ng-model="state">
-    <input type="text" placeholder="Filing Status" ng-model="filingStatus">
-    <button ng-click="bigfunction()">Submit Information</button>
-    <p>Income:<br> Raw Data (eg $50,000 = 50000)</p>
-    <p>State Abbreviation:<br> Tennessee: TN, California: CA, etc.</p>
+    <div class="inputbutt">
+    <input id="payrateinp"class="input-form" type="text" placeholder="Income" ng-model="payRate"><br>
+    <input id="stateinp"type="text" placeholder="State Abbreviation" ng-model="state"><br>
+    <input id="filinginp"type="text" placeholder="Filing Status" ng-model="filingStatus"><br>
+    <button class="btn btn-info "ng-click="bigfunction()"><span class="glyphicon glyphicon-ok"></span></button>
+    <button class="btn btn-success" id="budgetbtn" ui-sref="budget">Continue to Budget</button>
+</div>
+<div class="texty">
+    <p>Income:<br> Raw Data (ex $50,000 = 50000)</p><br>
+    <p>State Abbreviation:<br> Tennessee: TN, California: CA, etc.</p><br>
     <p>Filing Status:<br> 1 - Single;<br> 2 - Married, Filing Jointly;<br> 3 - Married, Filing Seperately;<br> 4 - Head of Household</p>
-    <!-- 
-        
-        (either "single", "married", "married_separately", or "head_of_household")
-        
-        <button ng-click="addthestuff()">Clicky</button> -->
+    
+</div>
+<p>To do: "How did we reach these numbers? add button to continue to budget</p>
 
 
 
+    </div>
+        <div class="container backgroundclr">
+            <canvas id="myChart"></canvas>
+            </div>
+     
 
-    <div class="container">
-        <canvas id="myChart" width="1500" height="800"></canvas>
-        </div>
+    </div>
+
  
         
 </div>

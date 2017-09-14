@@ -1,8 +1,8 @@
 .stupidname{
     background-image: url("../img/marc-olivier-jodoin-247246.jpg");
-    background-color: #034078;
+    background-color: #A1D2CE;
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     color: #034078;
     background-position: center;
     background-size: 100%;
@@ -10,20 +10,72 @@
     background-position-y: 30%;
 }
 
+input {
+    background: rgba(255,255,255,0.5); 
+    padding: 5px;
+    text-align: center;
+}
+
+.link {
+    height: 30vh;
+    width: 100%;
+}
+
+.backgroundclr {
+    background-color: #A1D2CE;
+    width: 100%;
+}
+
 .blackback{
-    background-color: #342E37;
-    width: 100vw;
-    height: 100vh;;
+    background-color: #A1D2CE;
+    width: 100%;
+    height: 25%;
     color: black;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
 }
 
-#thecontainer {
-    display: block;
+.container {
+    padding: 1% 1%;
+    height: 50vh;
+    width: 100vw;
+}
+#myChart {
+    height: 370px;
     width: 500px;
-    height: 500px;
-
 }
-
 p {
     color: white;
+    display: flex;
+    font-weight: bold;
+    height: 50px;
+    margin: 0vh 5vw;
+    padding: 5px 5px;
 }
+.texty {
+    height: 450px;
+    width: auto;
+}
+
+.stacking {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputbutt {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 20px 20px 20px 20px;
+}
+
+#budgetbtn {
+    text-align: center;
+    display: none;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
