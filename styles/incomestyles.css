@@ -17,6 +17,7 @@ input {
     font-size: 16px;
 }
 
+
 input::placeholder {
     color: #182119;
     font-size: 16px;
@@ -43,12 +44,18 @@ input::placeholder {
 
 .container {
     padding: 1% 1%;
-    height: 50vh;
+    height: auto;
     width: 100vw;
+    background-color: #062726;
+    background-size: center;
+
 }
 #myChart {
     height: 370px;
     width: 500px;
+    background-color: #062726;
+    background-size: center;
+
 }
 p {
     color: white;
@@ -58,6 +65,14 @@ p {
     margin: 0vh 5vw;
     padding: 5px 5px;
 }
+
+
+.imptext {
+    width: 20vw;
+    padding-left: 5%;
+    font-size: 18px;
+}
+
 .texty {
     height: 450px;
     width: auto;
@@ -66,6 +81,8 @@ p {
 .stacking {
     display: flex;
     flex-direction: column;
+    background-color: #062726;
+    background-size: 100%;
 }
 
 .inputbutt {
@@ -78,6 +95,8 @@ p {
 #budgetbtn {
     text-align: center;
     display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .btn {

@@ -10,7 +10,7 @@
     <input id="stateinp"type="text" placeholder="State Abbreviation" ng-model="state"><br>
     <input id="filinginp"type="text" placeholder="Filing Status" ng-model="filingStatus"><br>
     <button class="btn btn-info "ng-click="bigfunction()"><span class="glyphicon glyphicon-ok"></span></button>
-    <button class="btn btn-success" id="budgetbtn" ui-sref="budget">Continue to Budget</button>
+    <button class="btn btn-success" id="budgetbtn" ui-sref="budget"><span class="budgetbtntext">Continue to Budget</span></button>
 </div>
 <div class="texty">
     <p>Income:<br> Raw Data (ex $50,000 = 50000)</p><br>
@@ -18,12 +18,15 @@
     <p>Filing Status:<br> 1 - Single;<br> 2 - Married, Filing Jointly;<br> 3 - Married, Filing Seperately;<br> 4 - Head of Household</p>
     
 </div>
-<p>To do: "How did we reach these numbers? section</p>
+<p class="imptext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, you can input your income, state, and tax-filing status to receive a breakdown of your income taxes. Most of the time, you'll have to pay both a state and federal income tax, but some states, such as Texas and Tennessee, do not tax income. <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After submitting your information, you can click the sections of the graph to read how much disposable income you have left over, or you can continue to the budgeting page. 
+</p>
 
 
 
     </div>
-        <div class="container backgroundclr">
+
+    <div class="container backgroundclr">
             <canvas id="myChart"></canvas>
             </div>
      

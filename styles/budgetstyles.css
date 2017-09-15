@@ -1,0 +1,20 @@
+.maindiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftimg {
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    background-image: url("../img/nicolai-berntsen-29454.jpg");
+    background-position: center;
+    background-color: red;
+}
+
+.rightcontent{
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    background-color: #040926;
+}

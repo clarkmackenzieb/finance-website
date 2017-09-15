@@ -43,13 +43,7 @@ function removeData(chart) {
 
 
   var ctx = document.getElementById("myChart").getContext('2d');
-  
-    
-$scope.addthestuff = function(){
-    var mainrent = $scope.mainincome/3;
-    addData(myPieChart, "Rent", "green", mainrent);
-    
-};
+
 
 $scope.bigfunction = function(){
     var checky = true;
@@ -102,23 +96,15 @@ $scope.bigfunction = function(){
     //bug- chart acts weird after inputting new info
     budgetService.incomeTaxMe(daData).then(function(response){
 
-    var expInc = $scope.payRate - (response.data.annual.state.amount) - (response.data.annual.federal.amount) - (response.data.annual.fica.amount);
+   $scope.expInc = budgetService.disInc = $scope.payRate - (response.data.annual.state.amount) - (response.data.annual.federal.amount) - (response.data.annual.fica.amount);
     
     document.getElementById("budgetbtn").style.display = "flex"; 
-        
-        if(myPieChart){
-            removeData(myPieChart);
-            removeData(myPieChart);
-            removeData(myPieChart);
-            removeData(myPieChart);
-        } 
-
         var myPieChart = new Chart(ctx,{
             type: 'pie',
             data: {
               datasets: [{
                   label: "Annual Income Tax",
-                  data: [(response.data.annual.state.amount), (response.data.annual.federal.amount), (response.data.annual.fica.amount), (expInc)],    
+                  data: [(response.data.annual.state.amount), (response.data.annual.federal.amount), (response.data.annual.fica.amount), ($scope.expInc)],    
                   // state tax, federal tax, FICA tax, remaining money 
                   backgroundColor: [
                     "#AD2D38","#FCEC52","#3B7080","#AFC97E"
@@ -143,7 +129,9 @@ $scope.bigfunction = function(){
     
     
     });
-}  
+}
+
+
   
 }
 

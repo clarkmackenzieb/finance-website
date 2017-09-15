@@ -1,7 +1,8 @@
-angular.module("budgetApp").service("budgetService", function($http){
+angular.module("budgetApp").service("budgetService", function($http, $firebaseArray){
 
   var promise;
   var stateTax;
+  this.disInc = 0;
 
   this.incomeTaxMe = function(taxInfo){
 
@@ -25,9 +26,36 @@ angular.module("budgetApp").service("budgetService", function($http){
   }
 
 
- 
 
-});
+
+  this.getData = function(cityPass){
+    
+        var ref = firebase.database().ref()
+        var arr = $firebaseArray(ref)
+    
+        return arr.$loaded().then(function(response){
+            var results = [];
+            if(cityPass){
+                for(var i = 0; i < response.length; i++){
+                    console.log(response.data)
+                    if(response.data.includes(city)){
+                        results.push(response[i]);
+                    }
+                    console.log(results);
+                  }
+                return results;
+            }
+            
+    
+        });
+    }
+    
+    })
+
+// disInc = incomeCtrl.expInc;
+
+
+
 
 
 // return $http({

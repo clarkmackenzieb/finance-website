@@ -17,7 +17,8 @@ angular.module("budgetApp", ['ui.router', 'firebase'])
     })
     .state('budget',{
         url:"/budget",
-        templateUrl:"../views/budget.html"
+        templateUrl:"../views/budget.html",
+        controller: "budgetPageCtrl",
     })
 
     $urlRouterProvider
