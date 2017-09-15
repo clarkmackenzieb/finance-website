@@ -20,7 +20,7 @@
 }
 
 .green {
-    color: #FCEC52;
+    color: #28AFB0;
 }
 
 
@@ -34,12 +34,13 @@
 .bigtext {
     font-size: 90px;
     margin-bottom: 1%;
-    width: 30%;
+    width: auto;
     height: 20%;
+    /* border-bottom: 5px solid #FCEC52; */
 }
 
 .wrappy {
-    width: 25%;
+    width: 25vw;
     font-weight: normal;
     margin-left: 2%;
 }

@@ -53,30 +53,30 @@ $scope.addthestuff = function(){
 
 $scope.bigfunction = function(){
     var checky = true;
-    if($scope.payRate <= 0 || typeof $scope.payRate !== "number"){
+    // if($scope.payRate <= 0 || typeof $scope.payRate !== "number"){
         
-        document.getElementById("payrateinp").placeholder="Please enter a valid input (ex. 15000)";
-        document.getElementById("payrateinp").style.border = "solid 5px red";
-        document.getElementById("budgetbtn").style.display = "none"; 
-        checky = false;
-        }
+    //     document.getElementById("payrateinp").placeholder="Please enter a valid input (ex. 15000)";
+    //     document.getElementById("payrateinp").style.border = "solid 5px red";
+    //     document.getElementById("budgetbtn").style.display = "none"; 
+    //     checky = false;
+    //     }
 
-    if ($scope.state === undefined || typeof $scope.state != "string" || $scope.state.length > 2 || $scope.state.length <= 0){
-        $scope.state = "";
-        document.getElementById("stateinp").placeholder="Please enter a valid input (ex. TN)";
-        document.getElementById("stateinp").style.border = "solid 5px red";
-        document.getElementById("budgetbtn").style.display = "none"; 
-        checky = false;
-    }
+    // if ($scope.state === undefined || typeof $scope.state != "string" || $scope.state.length > 2 || $scope.state.length <= 0){
+    //     $scope.state = "";
+    //     document.getElementById("stateinp").placeholder="Please enter a valid input (ex. TN)";
+    //     document.getElementById("stateinp").style.border = "solid 5px red";
+    //     document.getElementById("budgetbtn").style.display = "none"; 
+    //     checky = false;
+    // }
 
-    if($scope.filingStatus <= 0 || $scope.filingStatus > 4 || typeof $scope.filingStatus != "string"){
-        $scope.filingStatus = "";
-        document.getElementById("filinginp").style.border = "solid 5px red";
-        document.getElementById("filinginp").placeholder="Please enter a valid input (ex. 1)";
+    // if($scope.filingStatus <= 0 || $scope.filingStatus > 4 || typeof $scope.filingStatus != "string"){
+    //     $scope.filingStatus = "";
+    //     document.getElementById("filinginp").style.border = "solid 5px red";
+    //     document.getElementById("filinginp").placeholder="Please enter a valid input (ex. 1)";
 
-        document.getElementById("budgetbtn").style.display = "none"; 
-        checky = false;
-    }
+    //     document.getElementById("budgetbtn").style.display = "none"; 
+    //     checky = false;
+    // }
 
     // if(checky === false){
     //     if($scope.payRate > 0 && typeof $scope.payRate === "number"){
@@ -89,7 +89,7 @@ $scope.bigfunction = function(){
     //         document.getElementById("filinginp").style.border = "none";
     //     }
   
-    else if(checky === true){
+  if(checky === true){
     var daData = {
         "pay_rate": $scope.payRate,
         "state": ($scope.state).toUpperCase(),
@@ -106,12 +106,19 @@ $scope.bigfunction = function(){
     
     document.getElementById("budgetbtn").style.display = "flex"; 
         
+        if(myPieChart){
+            removeData(myPieChart);
+            removeData(myPieChart);
+            removeData(myPieChart);
+            removeData(myPieChart);
+        } 
+
         var myPieChart = new Chart(ctx,{
             type: 'pie',
             data: {
               datasets: [{
                   label: "Annual Income Tax",
-                  data: [(response.data.annual.state.amount).toFixed(2), (response.data.annual.federal.amount).toFixed(2), (response.data.annual.fica.amount).toFixed(2), (expInc).toFixed(2)],    
+                  data: [(response.data.annual.state.amount), (response.data.annual.federal.amount), (response.data.annual.fica.amount), (expInc)],    
                   // state tax, federal tax, FICA tax, remaining money 
                   backgroundColor: [
                     "#AD2D38","#FCEC52","#3B7080","#AFC97E"
@@ -128,6 +135,7 @@ $scope.bigfunction = function(){
           },
           options: {
               cutoutPercentage: 50,
+              events: ['click']
         }
         });
         
