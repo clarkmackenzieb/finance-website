@@ -18,3 +18,8 @@
     height: 100vh;
     background-color: #040926;
 }
+
+#myChart {
+    height: 500px;
+    width: 500px;
+}

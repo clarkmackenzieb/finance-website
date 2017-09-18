@@ -26,28 +26,41 @@ angular.module("budgetApp").service("budgetService", function($http, $firebaseAr
   }
 
 
+this.weirdFunc = function(){
+  return $http.get("https://www.numbeo.com/api/city_prices?api_key=jy1ndvkcvv0n0g&query=Dallas").then(function(rentresponse){
+                  console.log(rentresponse)
+                  return rentresponse;
+                })
+}
 
 
-  this.getData = function(cityPass){
+
+  this.getData = function(data){
     
         var ref = firebase.database().ref()
         var arr = $firebaseArray(ref)
     
         return arr.$loaded().then(function(response){
-            var results = [];
-            if(cityPass){
-                for(var i = 0; i < response.length; i++){
-                    console.log(response.data)
-                    if(response.data.includes(city)){
-                        results.push(response[i]);
-                    }
-                    console.log(results);
-                  }
-                return results;
-            }
+
+            var results = response[0].find(function(cur){
+              return cur.city.toLowerCase().trim().includes(data.toLowerCase().trim())
+            })
             
-    
+            
+            
+            
+            return $http.get("https://www.numbeo.com/api/city_prices?api_key=jy1ndvkcvv0n0g&query=Dallas").then(function(rentresponse){
+
+              
+              return rentresponse;
+            })
+
+
         });
+
+
+        
+        
     }
     
     })
