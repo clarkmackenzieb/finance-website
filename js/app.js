@@ -6,18 +6,18 @@ angular.module("budgetApp", ['ui.router', 'firebase'])
     $stateProvider
     .state('home',{
         url:"/",
-        templateUrl:"../views/home.html"
+        templateUrl:"#/views/home.html"
     })
     .state('income',{
         url:"/income",
-        templateUrl:"../views/income.html",
+        templateUrl:"#/views/income.html",
         controller: "incomeCtrl",
 
     
     })
     .state('budget',{
         url:"/budget",
-        templateUrl:"../views/budget.html",
+        templateUrl:"#/views/budget.html",
         controller: "budgetPageCtrl",
     })
 
