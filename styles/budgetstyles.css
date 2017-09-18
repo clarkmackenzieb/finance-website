@@ -1,25 +1,118 @@
+* {
+    color: white;
+    background-color: #040926;
+}
+
 .maindiv {
     display: flex;
     flex-direction: row;
+    background-color: #040926;
+    height: 100vh;
 }
 
 .leftimg {
     display: flex;
     width: 50vw;
-    height: 100vh;
-    background-image: url("../img/nicolai-berntsen-29454.jpg");
+    height: 100%;
+    background-image: url("../img/oscar-aguilar-325426.jpg");
     background-position: center;
     background-color: red;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+h3 {
+    color: white;
+    margin-left: 35%;
+}
+
+.city {
+    width: 200px;
+    height: auto;
+    margin-left: 35%;
 }
 
 .rightcontent{
     display: flex;
     width: 50vw;
-    height: 100vh;
+    height: auto;
+    background-color: #040926;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#theChart {
+    background-color: #040926;
+    height: auto;
+    width: 500px;
+
+}
+
+
+.loans {
+    margin-left: 35%;
+}
+
+.chartcontainer {
     background-color: #040926;
 }
 
-#myChart {
-    height: 500px;
-    width: 500px;
+.hiddenstudent {
+    visibility: hidden;
+    height: auto;
+    width: 200px;
+}
+
+.hiddencar {
+    visibility: hidden;
+    height: auto;
+    width: 200px;
+
+}
+
+.hiddencredit {
+    visibility: hidden;
+    height: auto;
+    width: 200px;
+
+}
+
+#budgetspan {
+    color: white;
+    font-size: 16px;
+}
+
+.select-style {
+    margin-left: 30%;
+    border: 1px solid #ccc;
+    width: 250px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #5BC0BE;
+    color: white;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: #5BC0BE;
+    background-image: none;
+
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.bigbtn {
+    width: 200px;
+    margin-left: 35%;
+}
+
+.footbackground2 {
+    background-color: #040926;
+    margin-left: 40%;
+    margin-top: 50px; 
 }

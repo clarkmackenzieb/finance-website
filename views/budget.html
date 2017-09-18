@@ -1,17 +1,48 @@
 <div class="maindiv">
     
-    <div class="leftimg">
+    <div class="leftimg" ui-sref="home">
 
     </div>
 
     <div class="rightcontent">
-        <div>
-        <input type="text" ng-model="cityPass" placeholder="City">
-        <button ng-click="getData(cityPass)">gjeklrjgea</button>
-            <button ng-click="sillyfun()">Testy</button>
-    </div>
-        <div id="myChart">
+        <budget-head-dir class="budgethead"></budget-head-dir>
+        <input class="city" type="text" ng-model="cityPass" placeholder="City"><br>
+            <div class="loans">
+         <input type="checkbox" value="studentloans" class="studentloans" id="studentmoney"><span id="budgetspan">Student Loans?<br></span>  
+         <input type="text" ng-model="studentloans" class="hiddenstudent" placeholder="Minimum Monthly Payment"><br>
 
+         <input type="checkbox" value="carloans" class="carloans" id="carmoney"><span id="budgetspan">Car Loans?<br></span>  
+         <input type="text" ng-model="carloans" class="hiddencar" placeholder="Minimum Monthly Payment"><br>
+
+         <input type="checkbox" value="creditloans" class="creditloans" id="creditmoney"><span id="budgetspan">Credit Card Debt?</span>  
+         <input type="text" ng-model="creditloans" class="hiddencredit" placeholder="Minimum Monthly Payment"><br>
+            </div>
+   <!-- ^ better name? lol  -->
+        
+            
+    <div class="select-style">
+        <select name="Rent Options" class="rentselector" id="housing">
+            <option value="citycenter1" ng-model="citycenter1">1 BDRM Apartment, City Center</option>
+            <option value="rural3" ng-model="rural3">3 BDRM Apartment, Outside of City Center</option>
+            <option value="rural1" ng-model="rural1">1 BDRM Apartment, Outside of City Center</option>
+            <option value="citycenter3" ng-model="citycenter3">3 BDRM Apartment, City Center</option><br>
+        </select>
+    </div>
+
+    <button class="btn btn-danger bigbtn" ng-click="getData(cityPass)">gjeklrjgea</button><br>
+    
+
+<h3 id="#budgetspan">Monthly Budget</h3>
+<div class="chartcontainer">
+        <canvas id="theChart">
+
+        </canvas>
+    </div>
+        <div class="footbackground2">
+                <budget-foot-dir-2></budget-foot-dir-2>
             </div>
     </div>
+
+    
+
 </div>

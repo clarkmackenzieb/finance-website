@@ -1,4 +1,5 @@
 <div class="backgroundclr">
+        <budget-head-dir></budget-head-dir>
 <div class="stupidname"> 
        <a ui-sref="home" class="link"></a>
 </div>
@@ -13,31 +14,38 @@
     <button class="btn btn-success" id="budgetbtn" ui-sref="budget"><span class="budgetbtntext">Continue to Budget</span></button>
 </div>
 <div class="texty">
-    <p>Income:<br> Raw Data (ex $50,000 = 50000)</p><br>
-    <p>State Abbreviation:<br> Tennessee: TN, California: CA, etc.</p><br>
-    <p>Filing Status:<br> 1 - Single;<br> 2 - Married, Filing Jointly;<br> 3 - Married, Filing Seperately;<br> 4 - Head of Household</p>
+    <p class="bold">Raw Data</p>
+    <p> (ex $50,000 = 50000)</p>
+    <p class="bold">State Abbreviation:</p>
+    <p>Tennessee: TN, California: CA, etc.</p>
+    <p class="bold">Filing Status:</p>
+    <p>1 - Single;</p> 
+    <p>2 - Married, Filing Jointly;</p>
+    <p>3 - Married, Filing Seperately;</p>
+    <p>4 - Head of Household; </p>
     
 </div>
 <p class="imptext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, you can input your income, state, and tax-filing status to receive a breakdown of your income taxes. Most of the time, you'll have to pay both a state and federal income tax, but some states, such as Texas and Tennessee, do not tax income. <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After submitting your information, you can click the sections of the graph to read how much disposable income you have left over, or you can continue to the budgeting page. 
 </p>
 
+<div class="container backgroundclr">
+        <canvas id="myChart"></canvas>
+        </div>
+ 
 
-
-    </div>
-
-    <div class="container backgroundclr">
-            <canvas id="myChart"></canvas>
-            </div>
-     
+</div>
 
     </div>
+
+   
 
  
         
 </div>
 
-
-
+<div class="footbackground3">
+<budget-foot-dir-3></budget-foot-dir-3>
+<div>
 </div>
 
